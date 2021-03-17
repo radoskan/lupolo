@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupolo Apartments</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/41969061bb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="index.html">
+            <p>Lupolo Apartments<p></p>
+        </a>
+        <a class="book" href="#dates">wybierz pokój
+        </a>
+        <a class="call" href="tel:+48694149723">
+            <i class="fas fa-phone-square"></i>
+            <p>694 149 723</p>
+        </a>
+
+    </nav>
+
+    <section class="photo2">
+
+    </section>
+
+    <div> <a id="dates"></a>
+
+    </div>
+
+    <iframe id="ra-reservation-form-v2" style="width: 100%; height:100px;
+border: none; padding: 0;" src="https://roomadmin.pl/widget/search-engine/start?oh=6dd0f71a9311464d8c5306c1f4baf1bc68dd82e7&style=%7B%22color_accent%22%3A%22%23385248%22%2C%22color_bg%22%3A%22transparent%22%7D&"></iframe>
+    <script>
+        try {
+            (function() {
+                var iframe =
+                    window.document.getElementById('ra-reservation-form-v2');
+
+                function
+                raMessageReceiver(event) {
+                    if (iframe) {
+                        if (!event.data.sender) {
+                            return;
+                        }
+                        if (event.data.height) {
+                            iframe.style.height = (event.data.height +
+                                10) + "px";
+                        }
+                        if (event.data.event && event.data.event.name ===
+                            "widget.scrollup.requested") {
+                            try {
+                                iframe.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "start"
+                                });
+                            } catch (e) {}
+                        }
+                    }
+                }
+                window.addEventListener("message", raMessageReceiver, false);
+
+                function
+                setup() {
+                    try {
+                        iframe.contentWindow.postMessage({
+                            location: window.location.toString(),
+                            setup: {
+                                autoHeight: true
+                            }
+                        }, "*");
+                    } catch (e) {}
+                }
+                setInterval(setup, 1000);
+                iframe.addEventListener("load",
+                    setup);
+            })();
+        } catch (e) {
+            console.error(e);
+        }
+
+    </script>
+
+
+
+    <section class="photo1">
+
+    </section>
+
+    <section class="text">
+
+        <p><i class="fas fa-hand-holding-usd"></i><br>od 99 zł za 2os</p>
+        <p><i class="fas fa-chess-rook"></i><br>blisko zabytków</p>
+        <p><i class="fas fa-bath"></i><br>prywatne łazienki</p>
+
+    </section>
+
+    <section class="photo3">
+
+    </section>
+
+    <section class="text">
+
+        <p><i class="fas fa-parking"></i><br>parking od 20zł/doba</p>
+        <p><i class="far fa-credit-card"></i><br>20% przedpłata</p>
+        <p><i class="fas fa-envelope"></i><br>biuro@nocnykrakow.pl</p>
+
+    </section>
+
+    <iframe class="mapa" src="https://www.google.com/maps/d/u/0/embed?mid=1xbFldnpb_JKoW114gdiBWdkq8viLzJ2J" width="100%" height="400px"></iframe>
+
+    <footer>
+        <p>Od ponad 10 lat na portalach:</p>
+        <img src=booking.png>
+        <img src=nocowanie_pl_logo.png>
+
+
+    </footer>
+</body>
+
+</html>
