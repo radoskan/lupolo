@@ -44,7 +44,7 @@ nav i {
 .logo {
 
     padding: 15px 120px 15px 100px;
-    background-image: url(logo-green-280.png);
+    background-image: url(../images/logo-green-280.png);
     background-repeat: no-repeat;
     background-size: 70px;
     background-position: 20px;
@@ -99,7 +99,7 @@ i:hover {
 }
 
 .photo1 {
-    background-image: url(zagrody-male.jpg);
+    background-image: url(../images/zagrody-male.jpg);
     background-size: cover;
     background-position: center;
     height: 85vh;
@@ -107,7 +107,7 @@ i:hover {
 }
 
 .photo2 {
-    background-image: url(radziwil-male.jpg);
+    background-image: url(../images/radziwil-male.jpg);
     background-size: cover;
     background-position: center;
     height: 85vh;
@@ -117,7 +117,7 @@ i:hover {
 }
 
 .photo3 {
-    background-image: url(felicjanek-male.jpg);
+    background-image: url(../images/felicjanek-male.jpg);
     background-size: cover;
     background-position: bottom;
     height: 85vh;
